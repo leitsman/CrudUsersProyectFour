@@ -1,13 +1,18 @@
 import React from "react";
 import ItemCards from "./ItemCards";
 
-const Main = ({ Api }) => {
-  console.log(Api[0]);
+const Main = ({ Api, getDate, setActivateDelete }) => {
+  // console.log(Api[0]);
   return (
     <main className="main">
       <div className="content--cards">
         {Api.map((element) => (
-          <ItemCards key={element.id} element={element} />
+          <ItemCards
+            key={element.id}
+            element={element}
+            getDate={getDate}
+            setActivateDelete={setActivateDelete}
+          />
         ))}
         {/* <div className="content--Card-user">
           <h2>Juan José Mosquera Gomez</h2>

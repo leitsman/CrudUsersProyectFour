@@ -1,6 +1,6 @@
 import React from "react";
 
-const ItemCards = ({ element }) => {
+const ItemCards = ({ element, getDate, setActivateDelete }) => {
   return (
     <div className="content--Card-user">
       <h2>
@@ -16,8 +16,14 @@ const ItemCards = ({ element }) => {
       <div className="content--icon-title">
         <h3>options:</h3>
         <div className="content--icons-edits">
-          <i className="fa-solid fa-pen-to-square fa-2x"></i>
-          <i className="fa-solid fa-trash-can fa-2x"></i>
+          <i
+            className="fa-solid fa-pen-to-square fa-2x"
+            onClick={() => getDate(element)}
+          ></i>
+          <i
+            className="fa-solid fa-trash-can fa-2x"
+            onClick={() => setActivateDelete(element.id)}
+          ></i>
         </div>
       </div>
     </div>
