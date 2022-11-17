@@ -27,7 +27,6 @@ const ApiGet = () => {
   };
   // ==================== DELETE ITEM ================
   const [ActivateDelete, setActivateDelete] = useState(null);
-  // console.log(activateDelete);
   const eliminate = () => {
     if (ActivateDelete) {
       axios

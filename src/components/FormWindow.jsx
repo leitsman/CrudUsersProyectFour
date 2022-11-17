@@ -49,7 +49,6 @@ const FormWindow = ({
       className={`content--form ${
         Iterador ? "open-content-form" : "close-content-form"
       }`}
-      // onClick={() => setIterador(!Iterador)}
     >
       <div className="content--data-form">
         <i
