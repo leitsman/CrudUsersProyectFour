@@ -22,14 +22,14 @@ const FormWindow = ({
     if (SelectItem) {
       axios
         .put(
-          `https://users-crud1.herokuapp.com/users/${dateForm.id}/`,
+          `https://users-crud-6d0b.onrender.com/users/${dateForm.id}`,
           dateForm
         )
         .then((res) => PreGetApi())
         .catch((error) => console.error(error.response.data));
     } else {
       axios
-        .post("https://users-crud1.herokuapp.com/users/", dateForm)
+        .post("https://users-crud-6d0b.onrender.com/users", dateForm)
         .then((res) => PreGetApi())
         .catch((error) => console.error(error.response.data));
       reset(valueInitial);

@@ -11,7 +11,7 @@ const ApiGet = () => {
   // =============== precargador de api =============
   const PreGetApi = () => {
     axios
-      .get("https://users-crud1.herokuapp.com/users/")
+      .get("https://users-crud-6d0b.onrender.com/users")
       .then((res) => setApi(res.data))
       .catch((error) => console.error(error.response.data));
   };
@@ -30,7 +30,7 @@ const ApiGet = () => {
   const eliminate = () => {
     if (ActivateDelete) {
       axios
-        .delete(`https://users-crud1.herokuapp.com/users/${ActivateDelete}/`)
+        .delete(`https://users-crud-6d0b.onrender.com/users/${ActivateDelete}`)
         .then((res) => PreGetApi())
         .catch((error) => console.error(error.response.data));
       setActivateDelete(null);
